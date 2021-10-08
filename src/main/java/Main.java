@@ -45,5 +45,8 @@ public class Main {
         cats.stream()
                 .filter(value -> value.getUpvotes() != null && Integer.parseInt(value.getUpvotes()) > 0)
                 .forEach(System.out::println);
+        
+        response.close();
+        httpClient.close();
     }
 }
